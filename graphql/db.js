@@ -15,6 +15,10 @@ let movies = [
 		id: 3,
 		name: 'movie D',
 		score: 9
+	},{
+		id: 4,
+		name: 'movie E',
+		score: 2
 	}
 ];
 
