@@ -1,24 +1,6 @@
-import { GraphQLServer } from "graphql-yoga";
-import resolvers from "./graphql/resolvers";
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import "./globalStyles";
 
-const server = new GraphQLServer({
-  typeDefs: `type Movie {
-    id: Int!
-    title: String!
-    rating: Float
-    description_intro: String
-    language: String
-    medium_cover_image: String
-    genres: [String]
-  }
-  
-  type Query {
-    movies(limit: Int, rating: Float): [Movie]!
-    movie(id: Int!): Movie
-    suggestions(id: Int!): [Movie]!
-  }
-  `,
-  resolvers
-});
-
-server.start(() => console.log("Graphql Server Running"));
+ReactDOM.render(<App />, document.getElementById("root"));
